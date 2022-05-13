@@ -1,6 +1,6 @@
 <?php
 
-class User implements IUser {
+class User {
 
     // attributes
     // ---------------
@@ -69,11 +69,11 @@ class User implements IUser {
 
     // constructor
     // -------------
-    public function __construct(int $id, string $email,
-                                string $username, 
-                                string $password, 
-                                string $name, 
-                                $role)
+    public function __construct(int $id = 0, string $email = "",
+                                string $username = "", 
+                                string $password = "", 
+                                string $name = "", 
+                                $role = Role::USER)
     {
         $this->set_id($id);
         $this->set_email($email);
