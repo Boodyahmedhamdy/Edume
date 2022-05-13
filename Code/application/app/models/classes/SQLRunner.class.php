@@ -1,5 +1,7 @@
 <?php 
 
+// SOME PROBLEM HAPPEND WHEN I USED IT TO CONNECT TO THE DATABASE .. NOT FIXEX YET
+// DON'T USE IT
 class SQLRunner {
     private static string $host_name = "localhost";
     private static string $user_name = "root";
