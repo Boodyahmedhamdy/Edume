@@ -1,4 +1,5 @@
 <?php
+require_once("Role.enum.php");
 
 class User {
 
@@ -9,7 +10,7 @@ class User {
     private string $username; # unique like the id
     private string $password;
     private string $name;
-    private $role;
+    private Role $role;
 
     // getters
     // -------------
@@ -87,7 +88,7 @@ class User {
 
     public function login()
     {
-        # code...
+        
     }
     public function logout()
     {
