@@ -1,30 +1,28 @@
 <?php
 
-require_once("../models/classes/SQLRunner.class.php");
+// require_once("../models/classes/SQLRunner.class.php");
 require_once("../models/classes/User.class.php");
 
-
-if(isset(($_POST["email"])) && (isset($_POST["password"]))) {
-    $user = new User();
-    $user->set_email($_POST["email"]);
-    $user->set_password($_POST["password"]);
-
-    $all_users = SQLRunner::run_query("select * from users");
-
-
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $the_email = $_POST["email"];
+    $the_password = $_POST["password"];
+    
+    if(isset($the_email) && (isset($the_password))) {
+        if(!(empty($the_email) && !(empty($the_password)))) {
+            $user = new User();
+            $user->set_email($the_email);
+            $user->set_password($the_password);
+    
+            if($user->login()) {
+                echo "logged in successfully";
+            }
+            else {
+                echo "wrong email or password";
+            }
+        }
+    }
 }
 
-    
-
-$user = new User();
-$user->set_email($_POST["email"]);
-$user->set_password($_POST["password"]);
-
-$sql = "select * from users where email = ". $user->get_email() ." and password = " .$user->get_password();
-
-$res = SQLRunner::run_query("select * from users");
-
-print_r($res);
 
 
 
