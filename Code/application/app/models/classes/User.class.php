@@ -88,6 +88,27 @@ class User {
 
     public function login()
     {
+        // the query
+        $sql = "select * from users where email = '$this->email' and password = '$this->password'";
+        
+        // create connection object
+        $con = new mysqli("localhost", "root", "root", "helwan", 3307);
+        
+        // run the query
+        $res = $con->query($sql);
+
+        // fetch and format the result from query
+        $res = $res->fetch_all(MYSQLI_ASSOC);
+
+        // if the query worked well -- return true
+        if($res != false) {
+            return $res;
+        }
+        else {
+            return false;
+        }
+        // close the connection in the end
+        $con->close();
         
     }
     public function logout()
