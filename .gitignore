@@ -1,1 +1,12 @@
+
+# file with what we disscussed in the meeting
 meeting.md
+
+# included files for the front end
+Code/application/app/views/**/vendor/
+
+# images
+Code/application/app/views/**/img
+
+# readme files for the license
+Code/application/app/views/**/forms/
