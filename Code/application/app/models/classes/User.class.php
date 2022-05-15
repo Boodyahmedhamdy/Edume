@@ -100,6 +100,9 @@ class User {
         // fetch and format the result from query
         $res = $res->fetch_all(MYSQLI_ASSOC);
 
+        // close the connection in the end
+        $con->close();
+
         // if the query worked well -- return true
         if($res != false) {
             return $res;
@@ -107,8 +110,7 @@ class User {
         else {
             return false;
         }
-        // close the connection in the end
-        $con->close();
+        
         
     }
     public function logout()
