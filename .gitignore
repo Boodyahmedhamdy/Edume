@@ -3,7 +3,7 @@
 meeting.md
 
 # included files for the front end
-Code/application/app/views/**/vendor/
+# Code/application/app/views/**/vendor/
 
 # images
 # Code/application/app/views/**/img
