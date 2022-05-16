@@ -1,6 +1,6 @@
 <?php
 
-class Teacher extends User implements ITeacher{
+class Teacher extends User{
 
 
     // attributes

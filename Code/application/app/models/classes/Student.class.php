@@ -1,7 +1,7 @@
 <?php
 
 
-class Student extends User implements IStudent {
+class Student extends User {
 
     // attributes
     private float $gpa;
