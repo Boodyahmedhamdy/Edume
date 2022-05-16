@@ -6,7 +6,7 @@ meeting.md
 Code/application/app/views/**/vendor/
 
 # images
-Code/application/app/views/**/img
+# Code/application/app/views/**/img
 
 # readme files for the license
-Code/application/app/views/**/forms/
+# Code/application/app/views/**/forms/
