@@ -58,7 +58,10 @@
                     <p class="text-center small">Enter your personal details to create account</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <!-- create new user -->
+                  <form class="row g-3 needs-validation" method="GET" novalidate>
+                    <!-- needed names
+                    name, email, username, password, age, type->teacher,  -->
                     <div class="col-12">
                       <label for="yourName" class="form-label">Your Name</label>
                       <input type="text" name="name" class="form-control" id="yourName" required>
@@ -100,13 +103,13 @@
                         <legend class="col-form-label col-sm-2 pt-0"> </legend>
                         <div class="col-sm-10">
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="type" id="gridRadios1" value="teacher" checked>
                             <label class="form-check-label" for="gridRadios1">
                               Techer
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                            <input class="form-check-input" type="radio" name="type" id="gridRadios2" value="student">
                             <label class="form-check-label" for="gridRadios2">
                               Student
                             </label>
@@ -166,3 +169,22 @@
 </body>
 
 </html>
+
+<?php
+
+
+// $user = new User();
+// $user->set_name($_GET["name"]);
+// $user->set_username($_GET["username"]);
+// $user->set_email($_GET["email"]);
+// $user->set_password($_GET["password"]);
+
+// if($user->register()) {
+//   echo "regestered successfully";
+// } else {
+//   echo "some error happend";
+// }
+
+
+?>
+

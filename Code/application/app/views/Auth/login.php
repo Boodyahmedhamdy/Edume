@@ -57,7 +57,7 @@
                     <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <form class="row g-3 needs-validation" action="../../controllers/login.controller.php" method="post" novalidate>
 
                     <div class="col-12">
                       <label for="youremail" class="form-label">email</label>
