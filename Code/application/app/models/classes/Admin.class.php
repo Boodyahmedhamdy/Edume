@@ -49,9 +49,9 @@ class Admin extends User {
     }
 
     // deleting Users
-    public function delete_student(Student $student)
+    public function delete_student($student)
     {
-        $Student = array_filter($Student, function ($element) use ($student)
+        $Student = array_filter($student, function ($element) use ($student)
         { 
             return ($element != $student);
         }
@@ -59,18 +59,18 @@ class Admin extends User {
 
     }
 
-    public function delete_teacher(Teacher $teacher)
+    public function delete_teacher($teacher)
     {
-        $Teacher = array_filter($Teacher, function ($element) use ($teacher)
+        $Teacher = array_filter($teacher, function ($element) use ($teacher)
         { 
             return ($element != $teacher);
         }
             );
     }
 
-    public function delete_organization(Organization $organization)
+    public function delete_organization($organization)
     {
-        $Organization = array_filter($Organization, function ($element) use ($organization)
+        $Organization = array_filter($organization, function ($element) use ($organization)
         { 
             return ($element != $organization);
         }
