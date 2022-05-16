@@ -88,7 +88,7 @@ class User {
 
     public function login()
     {
-        // the query
+        // the query -> to get the whole object with the same email and password
         $sql = "select * from users where email = '$this->email' and password = '$this->password'";
         
         // create connection object
@@ -119,7 +119,30 @@ class User {
     }
     public function register()
     {
-        # code...
+        $con = new mysqli("localhost", "root", "root", "helwan", 3307);
+
+        $res = $con->query("select username from users where username = '$this->username' and");
+
+        $res = $res->fetch_all(MYSQLI_ASSOC);
+
+        // the query is empty .. so insert new row
+        if($res == false) {
+            $res = $con->query("insert into users ");
+            if($res == true) {
+                echo "created new User";
+                return true;
+            }
+            else {
+                echo "something went wrong while regestring";
+                return false;
+            }
+
+        // the username was taken before
+        } else {
+            echo "$this->username is already taken choose another username";
+            return false;
+        }
+
     }
 
 
