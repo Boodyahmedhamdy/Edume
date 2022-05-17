@@ -39,7 +39,7 @@ class Organization extends Teacher {
                                 string $name)
     {
         parent::__construct($id, $email, $username, $password, $name, 
-        Role::ORGANIZATION);
+        "ORGANIZATION");
         
     }
 

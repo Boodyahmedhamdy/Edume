@@ -12,7 +12,7 @@ class Admin extends User {
                                 string $name)
     {
         parent::__construct($id, $email, $username, $password, $name, 
-        Role::ADMIN);
+        "ADMIN");
 
     }
 

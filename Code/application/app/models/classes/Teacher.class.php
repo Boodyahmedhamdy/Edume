@@ -43,7 +43,7 @@ class Teacher extends User{
                                 string $name)
     {
         parent::__construct($id, $email, $username, $password, $name, 
-        Role::TEACHER);
+        "TEACHER");
     }
 
 

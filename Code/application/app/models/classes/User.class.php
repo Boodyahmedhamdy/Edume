@@ -1,16 +1,16 @@
 <?php
-require_once("Role.enum.php");
 
 class User {
 
     // attributes
     // ---------------
-    private int $id;
-    private string $email; // unique .. to send emails
-    private string $username; # unique like the id
-    private string $password;
-    private string $name;
-    private Role $role;
+    private $id;
+    private $email; // unique .. to send emails
+    private $username; # unique like the id
+    private $password;
+    private $age;
+    private $role;
+    private $photo;
 
     // getters
     // -------------
@@ -30,65 +30,76 @@ class User {
     {
         return $this->password;
     }
-    public function get_name()
-    {
-        return $this->name;
-    }
+    
     public function get_role()
     {
         return $this->role;
+    }
+    public function get_age()
+    {
+        return $this->age;
+    }
+    public function get_photo()
+    {
+        return $this->photo;
     }
 
 
     // setters
     // ----------------
-    public function set_id(int $id)
+    public function set_id($id)
     {
         $this->id = $id;
     }
-    public function set_email(string $email)
+    public function set_email($email)
     {
         $this->email = $email;
     }
-    public function set_username(string $username)
+    public function set_username($username)
     {
         $this->username = $username;
     }
-    public function set_password(string $password)
+    public function set_password($password)
     {
         $this->password = $password;
     }
-    public function set_name(string $name)
-    {
-        $this->name = $name;
-    }
-    public function set_role(Role $role)
+    public function set_role($role)
     {
         $this->role = $role;
+    }
+    public function set_age($age)
+    {
+        $this->age = $age;
+    }
+    public function set_photo($photo)
+    {
+        $this->photo = $photo;
     }
 
 
     // constructor
     // -------------
-    public function __construct(int $id = 0, string $email = "",
-                                string $username = "", 
-                                string $password = "", 
-                                string $name = "", 
-                                $role = Role::USER)
+    public function __construct($id = 0, $email = "",
+                                $age = 20,
+                                 $username = "", 
+                                 $password = "", 
+                                 $role = "",
+                                 $photo = "")
     {
         $this->set_id($id);
         $this->set_email($email);
         $this->set_username($username);
         $this->set_password($password);
-        $this->set_name($name);
         $this->set_role($role);
+        $this->set_age($age);
+        $this->set_photo($photo);
 
     }
 
 
     public function login()
     {
-        // the query -> to get the whole object with the same email and password
+        // the query
         $sql = "select * from users where email = '$this->email' and password = '$this->password'";
         
         // create connection object
@@ -144,6 +155,4 @@ class User {
         }
 
     }
-
-
 }
