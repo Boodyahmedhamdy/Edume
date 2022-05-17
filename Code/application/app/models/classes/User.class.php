@@ -99,28 +99,28 @@ class User {
 
     public function login()
     {
-        // the query
-        $sql = "select * from users where email = '$this->email' and password = '$this->password'";
+        // // the query
+        // $sql = "select * from users where email = '$this->email' and password = '$this->password'";
         
-        // create connection object
-        $con = new mysqli("localhost", "root", "root", "helwan", 3307);
+        // // create connection object
+        // $con = new mysqli("localhost", "root", "", "edume", 3307);
         
-        // run the query
-        $res = $con->query($sql);
+        // // run the query
+        // $res = $con->query($sql);
 
-        // fetch and format the result from query
-        $res = $res->fetch_all(MYSQLI_ASSOC);
+        // // fetch and format the result from query
+        // $res = $res->fetch_all(MYSQLI_ASSOC);
 
-        // close the connection in the end
-        $con->close();
+        // // close the connection in the end
+        // $con->close();
 
-        // if the query worked well -- return true
-        if($res != false) {
-            return $res;
-        }
-        else {
-            return false;
-        }
+        // // if the query worked well -- return true
+        // if($res != false) {
+        //     return $res;
+        // }
+        // else {
+        //     return false;
+        // }
         
         
     }
@@ -130,29 +130,29 @@ class User {
     }
     public function register()
     {
-        $con = new mysqli("localhost", "root", "root", "helwan", 3307);
+    //     $con = new mysqli("localhost", "root", "", "edume", 3307);
 
-        $res = $con->query("select username from users where username = '$this->username' and");
+    //     $res = $con->query("select username from users where username = '$this->username' and");
 
-        $res = $res->fetch_all(MYSQLI_ASSOC);
+    //     $res = $res->fetch_all(MYSQLI_ASSOC);
 
-        // the query is empty .. so insert new row
-        if($res == false) {
-            $res = $con->query("insert into users ");
-            if($res == true) {
-                echo "created new User";
-                return true;
-            }
-            else {
-                echo "something went wrong while regestring";
-                return false;
-            }
+    //     // the query is empty .. so insert new row
+    //     if($res == false) {
+    //         $res = $con->query("insert into users ");
+    //         if($res == true) {
+    //             echo "created new User";
+    //             return true;
+    //         }
+    //         else {
+    //             echo "something went wrong while regestring";
+    //             return false;
+    //         }
 
-        // the username was taken before
-        } else {
-            echo "$this->username is already taken choose another username";
-            return false;
-        }
+    //     // the username was taken before
+    //     } else {
+    //         echo "$this->username is already taken choose another username";
+    //         return false;
+    //     }
 
     }
 }
