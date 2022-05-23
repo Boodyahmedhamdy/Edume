@@ -3,6 +3,7 @@ package Core;
 public class Organization extends Teacher{
     // attributes
     // --------------------
+    private Student[] students; // student follows this organization
 
 
     // constructors
@@ -21,6 +22,13 @@ public class Organization extends Teacher{
 
     // getters and setters
     // ------------------------
+
+    public Student[] getStudents() {
+        return students;
+    }
+    public void setStudents(Student[] students) {
+        this.students = students;
+    }
 
 
     // main functionality

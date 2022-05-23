@@ -3,12 +3,12 @@ package Core;
 public abstract class User {
 
     // attributes
-    private int id;
-    private String name;
-    private String username;
-    private String email;
-    private String password;
-    private int age;
+    private int id; // id for each user
+    private String name; // name
+    private String username; // username
+    private String email; // email
+    private String password; // password for his username and email
+    private int age; // age in years
 
     // getters and setters
     public int getId() {

@@ -3,7 +3,7 @@ package Core;
 public class Teacher extends User {
     // attributes
     // -------------------
-    private Course[] courses;
+    private Course[] courses; // courses created by this teacher
 
     // constructors
     // -------------------

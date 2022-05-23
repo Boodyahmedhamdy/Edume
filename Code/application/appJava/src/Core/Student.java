@@ -3,8 +3,8 @@ package Core;
 public class Student extends User{
     // attributes
     // -------------------
-    private Course[] courses;
-    private Organization organization;
+    private Course[] courses; // courses this student enrolled in
+    private Organization organization; // organization this student belongs to
 
     // constructors
     // -------------------

@@ -4,13 +4,13 @@ public class Course {
     // attributes
     // ----------------------
 
-    private String name;
-    private double price;
-    private String details;
-    private String topic;
-    private Lesson[] lessons;
-    private Teacher teacher;
-    private Student[] students;
+    private String name; // course name
+    private double price; // course price -- created by the Teacher
+    private String details; // details about the course
+    private String topic; // topic which is the course about
+    private Lesson[] lessons; // the course contains of lessons
+    private Teacher teacher; // the course creator
+    private Student[] students; // students enrolled in this course
 
 
     // constructors
