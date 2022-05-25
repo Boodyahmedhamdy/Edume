@@ -3,12 +3,11 @@ package Database;
 import java.sql.*;
 
 public class SQLRunner {
-    private static String hostName = "localhost";
-    private static String userName = "boody";
-    private static String password = "root";
-    private static String databaseName = "Edume";
-    private static String connectionString = "jdbc:sqlserver://" + hostName + ";Database=" + databaseName + ";";
-
+    private static final String hostName = "localhost";
+    private static final String userName = "testLogin";
+    private static final String password = "test";
+    private static final String databaseName = "Edume";
+    private static final String connectionString = "jdbc:sqlserver://" + hostName + ";Database=" + databaseName + ";";
 
 
 
