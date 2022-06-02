@@ -1,11 +1,12 @@
 package Core;
 
-import NotificationSystem.Notifications.Notifyer;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Teacher extends User {
     // attributes
     // -------------------
-    private Course[] courses; // courses created by this teacher
+    private List<Course> courses = new ArrayList<Course>(); // courses created by this teacher
 
     // constructors
     // -------------------
@@ -23,10 +24,12 @@ public class Teacher extends User {
 
     // getters and setters
     // -------------------
-    public Course[] getCourses() {
+
+
+    public List<Course> getCourses() {
         return courses;
     }
-    public void setCourses(Course[] courses) {
+    public void setCourses(List<Course> courses) {
         this.courses = courses;
     }
 
@@ -53,12 +56,14 @@ public class Teacher extends User {
     // -------------------
     public boolean createCourse(Course course) {
         System.out.println("creating course " + course.getName() + " ......");
-        this.courses[this.courses.length] = course;
+
+        this.courses.add(this.courses.size(), course);
         System.out.println("course created successfully");
         return true;
     }
 
     public void editCourse(Course course){
+        System.out.println("you are editing Course " + course.getName());
 
     }
 
@@ -67,11 +72,11 @@ public class Teacher extends User {
     }
 
     public void addLessonToCourse(Lesson lesson) {
-        this.courses[0].getLessons()[0] = lesson;
+//        this.courses[0].getLessons()[0] = lesson;
     }
 
     public void removeLessonFromCourse(Lesson lesson) {
-        this.courses[2].getLessons()[lesson.getIndex()] = null;
+//        this.courses[2].getLessons()[lesson.getIndex()] = null;
     }
 
 

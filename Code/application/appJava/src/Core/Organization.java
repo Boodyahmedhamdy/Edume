@@ -2,10 +2,13 @@ package Core;
 
 import NotificationSystem.Notifications.Notifyer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Organization extends Teacher{
     // attributes
     // --------------------
-    private Student[] students; // student follows this organization
+    private List<Student> students = new ArrayList<Student>(); // student follows this organization
 
 
     // constructors
@@ -25,10 +28,10 @@ public class Organization extends Teacher{
     // getters and setters
     // ------------------------
 
-    public Student[] getStudents() {
+    public List<Student> getStudents() {
         return students;
     }
-    public void setStudents(Student[] students) {
+    public void setStudents(List<Student> students) {
         this.students = students;
     }
 

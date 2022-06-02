@@ -1,9 +1,12 @@
 package Core;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student extends User{
     // attributes
     // -------------------
-    private Course[] courses; // courses this student enrolled in
+    private List<Course> courses = new ArrayList<Course>(); // courses this student enrolled in
     private Organization organization; // organization this student belongs to
 
     // constructors
@@ -24,10 +27,11 @@ public class Student extends User{
 
     // getters and setters
     // -------------------
-    public Course[] getCourses() {
+
+    public List<Course> getCourses() {
         return courses;
     }
-    public void setCourses(Course[] courses) {
+    public void setCourses(List<Course> courses) {
         this.courses = courses;
     }
 
