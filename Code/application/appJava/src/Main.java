@@ -1,7 +1,9 @@
+import Core.Course;
+import Core.Teacher;
 import Database.QueryGetter;
 import Database.SQLRunner;
+import NotificationSystem.Notifications.Notification;
 
-import javax.xml.transform.Result;
 import java.io.IOException;
 import java.sql.*;
 
@@ -48,6 +50,11 @@ public class Main {
 //        while(rs.next()) {
 //            System.out.println(rs.getString(1));
 //        }
+
+        ResultSet rs = SQLRunner.run("select * from students");
+        Notification notification = new Notification();
+        Teacher t = new Teacher();
+        t.createCourse(new Course());
 
     }
 }

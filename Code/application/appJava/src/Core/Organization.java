@@ -1,5 +1,7 @@
 package Core;
 
+import NotificationSystem.Notifications.Notifyer;
+
 public class Organization extends Teacher{
     // attributes
     // --------------------
@@ -38,8 +40,7 @@ public class Organization extends Teacher{
         return false;
     }
 
-
-
+    
     public boolean removeStudent(Student student) {
         return false;
     }

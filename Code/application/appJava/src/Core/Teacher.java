@@ -1,5 +1,7 @@
 package Core;
 
+import NotificationSystem.Notifications.Notifyer;
+
 public class Teacher extends User {
     // attributes
     // -------------------
@@ -50,6 +52,7 @@ public class Teacher extends User {
     // main functionality
     // -------------------
     public boolean createCourse(Course course) {
+        
         return false;
     }
 

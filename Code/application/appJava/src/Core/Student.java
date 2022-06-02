@@ -70,7 +70,26 @@ public class Student extends User{
 
     // main functionality
     // -------------------
+    /**
+     *     <h2>enroll in course
+     *          <code>enrollInCourse(Course course)</code>
+     *     </h2>
+     *     <ol>
+     *         <li>
+     *             check if student's balance is more than course price or not
+     *         </li>
+     *         <strong>if so</strong>
+     *         <ol>
+     *             <li>add course to this.courses</li>
+     *             <li>update database</li>
+     *             <li>send notification to student to confirm</li>
+     *             <li>send notification to teacher if student confirmed the enrollment</li>
+     *             <li>show successfully enrolled in message to student </li>
+     *         </ol>
+     *     </ol>
+     */
     public boolean enrollInCourse(Course course) {
+
         return false;
     }
 
