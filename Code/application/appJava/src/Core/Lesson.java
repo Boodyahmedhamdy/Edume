@@ -5,6 +5,7 @@ public class Lesson {
     // ----------------------------
     private Course course; // the course which this lesson belongs to
     private int index; // number of this course in course
+    private String name;
 
     // constructors
     public Lesson(){}
@@ -29,6 +30,13 @@ public class Lesson {
     }
     public void setCourse(Course course) {
         this.course = course;
+    }
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
 
 }
