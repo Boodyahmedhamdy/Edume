@@ -52,8 +52,10 @@ public class Teacher extends User {
     // main functionality
     // -------------------
     public boolean createCourse(Course course) {
-        
-        return false;
+        System.out.println("creating course " + course.getName() + " ......");
+        this.courses[this.courses.length] = course;
+        System.out.println("course created successfully");
+        return true;
     }
 
     public void editCourse(Course course){
