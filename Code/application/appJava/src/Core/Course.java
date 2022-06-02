@@ -1,5 +1,8 @@
 package Core;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Course {
     // attributes
     // ----------------------
@@ -8,9 +11,9 @@ public class Course {
     private double price; // course price -- created by the Teacher
     private String details; // details about the course
     private String topic; // topic which is the course about
-    private Lesson[] lessons; // the course contains of lessons
+    private List<Lesson> lessons = new ArrayList<Lesson>(); // the course contains of lessons
     private Teacher teacher; // the course creator
-    private Student[] students; // students enrolled in this course
+    private List<Student> students = new ArrayList<Student>(); // students enrolled in this course
 
 
     // constructors
@@ -18,16 +21,12 @@ public class Course {
     }
 
     public Course(String name, double price,
-                  String details, String topic,
-                  Lesson[] lessons, Teacher teacher,
-                  Student[] students) {
+                  String details, String topic, Teacher teacher) {
         this.name = name;
         this.price = price;
         this.details = details;
         this.topic = topic;
-        this.lessons = lessons;
         this.teacher = teacher;
-        this.students = students;
     }
 
     // getters and setters
@@ -61,10 +60,10 @@ public class Course {
         this.topic = topic;
     }
 
-    public Lesson[] getLessons() {
+    public List<Lesson> getLessons() {
         return lessons;
     }
-    public void setLessons(Lesson[] lessons) {
+    public void setLessons(List<Lesson> lessons) {
         this.lessons = lessons;
     }
 
@@ -75,13 +74,11 @@ public class Course {
         this.teacher = teacher;
     }
 
-    public Student[] getStudents() {
+    public List<Student> getStudents() {
         return students;
     }
-    public void setStudents(Student[] students) {
+    public void setStudents(List<Student> students) {
         this.students = students;
     }
-
-
-
+    
 }
