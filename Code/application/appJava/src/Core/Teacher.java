@@ -68,11 +68,17 @@ public class Teacher extends User {
     }
 
     public boolean dropCourse(Course course) {
-        return false;
+        System.out.println("deleting " + course.getName() + " .....");
+        this.courses.remove(course);
+        System.out.println("course has been deleted successfully");
+        return true;
     }
 
     public void addLessonToCourse(Lesson lesson) {
-//        this.courses[0].getLessons()[0] = lesson;
+        Course course = this.courses.get(0);
+        course.getLessons().add(lesson);
+        System.out.println("lesson " + lesson.getName() + " has been added to "
+                + course.getName());
     }
 
     public void removeLessonFromCourse(Lesson lesson) {
